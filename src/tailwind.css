@@ -8,6 +8,36 @@
 }
 
 :root {
+  --color-icon-disabled-default: var(--color-primitives-brand-400);
+  --color-primitives-brand-400: rgba(179, 179, 179, 1);
+  --color-primitives-brand-500: rgba(117, 117, 117, 1);
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-mode="SDS-light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-color-mode="SDS-light"] {
+  --color-icon-disabled-default: var(--color-primitives-brand-400);
+}
+
+[data-color-mode="SDS-dark"] {
+  --color-icon-disabled-default: var(--color-primitives-brand-500);
+}
+
+[data-color-mode="brand-b-light"] {
+  --color-icon-disabled-default: var(--color-primitives-brand-400);
+}
+
+:root {
   --animate-spin: spin 1s linear infinite;
 }
 
